@@ -1,11 +1,50 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Test from "../components/Test.jsx";
 
+const materials = [
+	{
+		name: "Eugenol",
+	},
+	{
+		name: "Veramoss",
+	},
+];
+// Anything dynamic doesn't go in here -- only what's compiled
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+// Homework:
+// - Install Tailwind: find the Astro way to do so -- requires simple mods to a few files
+// - Install DaisyUI
+// - Poke around at the Astro documentation (explore the world) maybe watch a few basics vids
+// - Try creating your own Astro component
+
+// 
 ---
 
 <Layout>
+	<h1>Wacky</h1>
+	<button class="btn m-2">Click Me!</button>
+	<Test text="ohmaigaaa">
+		<span>I am a child</span>
+	</Test>
+	<ul>
+		{
+			materials.map((material) => {
+				return <li>{material.name}</li>;
+			})
+		}
+	</ul>
+	<hr/>
+	<ul>
+		{
+			materials.map(material => <li>{material.name}</li>)
+		}
+	</ul>
+
 	<Welcome />
+	
 </Layout>
