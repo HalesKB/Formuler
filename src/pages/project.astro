@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+
+import Formula from "../components/Formula.jsx";
+import MaterialRow from "../components/MaterialRow.jsx";
+---
+
+<Layout>
+    <table>
+        <tr>
+            <th>Material</th>
+            <th>Dilution</th>
+            <th>Grams</th>
+            <th>Percent in Concentrate</th>
+            <th>Percent of Total</th>
+            <th>Note</th>
+        </tr>
+        <FormulaMaker />
+    </table>
+</Layout>
