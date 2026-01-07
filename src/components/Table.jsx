@@ -1,9 +1,10 @@
 import { useState } from "react";
+import {DndContext} from "@dnd-kit/core";
 import Formula from "./Formula.jsx";
-import materials from "./material_data.js";
+import material_data_array from "./material_data.js";
 
 const Table = () => {
-    const [current_materials, setMaterials] = useState(materials)
+    const [materials, setMaterials] = useState(material_data_array)
     return (
         <>
             <table>
@@ -18,7 +19,7 @@ const Table = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <Formula data={current_materials} />
+                    <Formula data={materials} />
                 </tbody>
             </table>
             <button className="btn" onClick={() => setMaterials([])}>Reset</button>

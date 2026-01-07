@@ -1,4 +1,4 @@
-const materials = [
+const material_data_array = [
     {
         id: 1,
         name: "Eugenol",
