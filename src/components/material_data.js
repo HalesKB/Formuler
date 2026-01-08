@@ -19,4 +19,4 @@ const material_data_array = [
     }
 ]
 
-export default materials
+export default material_data_array

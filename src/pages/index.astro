@@ -1,8 +1,7 @@
 ---
 import "../styles/global.css";
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-import Test from "../components/Test.jsx";
+import Table from "../components/Table.jsx";
 
 const materials = [
 	{
@@ -21,25 +20,9 @@ const materials = [
 ---
 
 <Layout>
-	<h1>Wacky</h1>
-	<button class="btn m-2">Click Me!</button>
-	<Test text="ohmaigaaa">
-		<span>I am a child</span>
-	</Test>
-	<ul>
-		{
-			materials.map((material) => {
-				return <li>{material.name}</li>;
-			})
-		}
-	</ul>
-	<hr/>
-	<ul>
-		{
-			materials.map(material => <li>{material.name}</li>)
-		}
-	</ul>
+	<h1>Fixture Materials Test List</h1>
+	<Table>
+	</Table>
 
-	<Welcome />
 	
 </Layout>
