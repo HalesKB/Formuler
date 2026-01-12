@@ -27,3 +27,5 @@ export const Logic = {
         return material.grams / totalGrammage;
     },    
 };
+
+export default Logic;

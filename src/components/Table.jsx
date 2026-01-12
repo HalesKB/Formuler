@@ -1,6 +1,6 @@
 import material_data_array from "./material_data.js";
 import MaterialRow from './MaterialRow.jsx';
-import { Logic } from "./logic.js";
+import Logic from "./logic.js";
 import { useState } from "react";
 import { DndContext, closestCenter } from "@dnd-kit/core";
 import {
@@ -11,8 +11,8 @@ import {
 
 let addedEthanol = 1; // THIS IS A TEMPORARY VALUE FOR TESTING -- REMOVE LATER
 
-const concentrateGrammage = Logic.concentrateGrammage(material_data_array);
-const totalGrammage = Logic.totalGrammage(material_data_array, addedEthanol);
+const concentrate_grammage = Logic.concentrateGrammage(material_data_array);
+const total_grammage = Logic.totalGrammage(material_data_array, addedEthanol);
 
 const Table = () => {
     const [materials, setMaterials] = useState(material_data_array)
@@ -37,8 +37,8 @@ const Table = () => {
                             <MaterialRow 
                                 key={material.id}
                                 material={material}
-                                concentrateGrammage={concentrateGrammage}
-                                totalGrammage={totalGrammage}
+                                concentrateGrammage={concentrate_grammage}
+                                totalGrammage={total_grammage}
                             />
                             ))}
                         </SortableContext>
