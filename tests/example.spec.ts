@@ -1,10 +1,16 @@
 import { test, expect } from '@playwright/test';
 
+// const zoo = (a) => {
+//   a();
+// }
+
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
+
+  await page.getByRole('link', { name: 'Get started' }).click();
 });
 
 test('get started link', async ({ page }) => {
